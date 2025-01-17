@@ -57,6 +57,22 @@ let loaders = [
             </div>
           </a>`,
   },
+   {
+    html: `<a href="assets/files/loader-6.txt" class="elements__item" target="_blank">
+            <div class="bird-container">
+  <div class="bird">
+    <div class="bird__body">
+      <div class="bird__wing bird__wing--left"></div>
+      <div class="bird__wing bird__wing--right"></div>
+    </div>
+    <div class="bird__head">
+      <div class="bird__eye"></div>
+      <div class="bird__beak"></div>
+    </div>
+  </div>
+</div>
+          </a>`,
+  },
   {
     html: `<a href="assets/files/loader-2.txt" class="elements__item" target="_blank">
             <div class="loader-2">
