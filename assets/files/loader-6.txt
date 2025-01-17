@@ -1,0 +1,112 @@
+<!-- HTML -->
+
+<div class="bird-container">
+  <div class="bird">
+    <div class="bird__body">
+      <div class="bird__wing bird__wing--left"></div>
+      <div class="bird__wing bird__wing--right"></div>
+    </div>
+    <div class="bird__head">
+      <div class="bird__eye"></div>
+      <div class="bird__beak"></div>
+    </div>
+  </div>
+</div>
+
+<!-- CSS -->
+
+.bird-container {
+  position: relative;
+  width: 100px;
+  height: 100px;
+  margin: 50px auto;
+}
+
+.bird {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  animation: fly 4s ease-in-out infinite;
+}
+
+.bird__body {
+  background: hsl(200, 70%, 60%);
+  width: 40px;
+  height: 30px;
+  border-radius: 50%;
+  position: relative;
+}
+
+.bird__wing {
+  background: hsl(200, 80%, 70%);
+  width: 30px;
+  height: 15px;
+  border-radius: 50%;
+  position: absolute;
+  top: 5px;
+}
+
+.bird__wing--left {
+  transform-origin: top right;
+  transform: rotate(-45deg);
+  animation: flap 0.5s ease-in-out infinite;
+}
+
+.bird__wing--right {
+  right: 0;
+  transform-origin: top left;
+  transform: rotate(45deg);
+  animation: flap 0.5s ease-in-out infinite;
+}
+
+.bird__head {
+  background: hsl(200, 70%, 60%);
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  position: absolute;
+  top: -10px;
+  left: 25px;
+}
+
+.bird__eye {
+  background: hsl(0, 0%, 10%);
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  position: absolute;
+  top: 6px;
+  left: 12px;
+}
+
+.bird__beak {
+  background: hsl(40, 90%, 60%);
+  width: 10px;
+  height: 6px;
+  border-radius: 0 50% 50% 0;
+  position: absolute;
+  top: 10px;
+  left: 18px;
+  transform: rotate(-30deg);
+}
+
+@keyframes flap {
+  0%, 100% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(20deg);
+  }
+}
+
+@keyframes fly {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
